@@ -13,3 +13,40 @@ Homework № 4
 
 В звязку з перебоями зі світлом не вистачає часу на детальну роботу над домашкою.
 
+Є функції однотипні, наприклад:
+
+List<ParameterItem> _readAndroidBuildData(AndroidDeviceInfo data) {
+List<ParameterItem> pi = <ParameterItem>[];
+
+    data.toMap().forEach((key, value) {
+      pi.add(ParameterItem(key.toString(), value));
+    });
+
+    return pi;
+}
+
+List<ParameterItem> _readIosDeviceInfo(IosDeviceInfo data) {
+List<ParameterItem> pi = <ParameterItem>[];
+
+    data.toMap().forEach((key, value) {
+      pi.add(ParameterItem(key.toString(), value));
+    });
+
+    return pi;
+}
+
+List<ParameterItem> _readLinuxDeviceInfo(LinuxDeviceInfo data) {
+List<ParameterItem> pi = <ParameterItem>[];
+
+    data.toMap().forEach((key, value) {
+      pi.add(ParameterItem(key.toString(), value));
+    });
+
+    return pi;
+}
+
+Не вийшло в мене щось з всіх зробити одну, щоб приймала необхідний тип даних data на вході
+Щось по типу
+List<ParameterItem> _readAndroidBuildData(<T> data) {
+постійно якісь помилки
+

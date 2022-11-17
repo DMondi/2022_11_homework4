@@ -65,10 +65,11 @@ class _InfoHomeState extends State<InfoHome> {
     });
   }
 
-  List<ParameterItem> _readAndroidBuildData(AndroidDeviceInfo build) {
+
+  List<ParameterItem> _readAndroidBuildData(AndroidDeviceInfo data) {
     List<ParameterItem> pi = <ParameterItem>[];
 
-    build.toMap().forEach((key, value) {
+    data.toMap().forEach((key, value) {
       pi.add(ParameterItem(key.toString(), value));
     });
 
